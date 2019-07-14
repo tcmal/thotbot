@@ -1,0 +1,5 @@
+.virtualenv
+images/**/*.png
+images/**/*.jpg
+images/**/*.jpeg
+config.json
