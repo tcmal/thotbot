@@ -126,7 +126,7 @@ class ThotBot(Client):
 			print("Started listening to %s" % thread_id)
 
 	def send_status(self, thread_id, thread_type):
-		text = "ThotBot™ by tcmal - https://github.com/tcmal/thotbot" 
+		text = "ThotBot™ by tcmal - https://github.com/tcmal/thotbot " 
 		text += "%s cogs loaded. " % len(self.cogs)
 		for cog in self.cogs:
 			text += "\n\t%s" % cog.get_status()
