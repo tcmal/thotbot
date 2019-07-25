@@ -100,6 +100,7 @@ class ThotBot(Client):
 		self.cogs = [WordResponseCog(self.config, "thot", "Silence, thot."),
 			WordResponseCog(self.config, "boomer", "Silence, boomer."),
 			WordResponseCog(self.config, "swear", "This is a christian groupchat, so no sw**rs."),
+			WordResponseCog(self.config, "musk", "you"),
 			WordResponseCog(self.config, "bruh", "bruh")]
 		print("Ready.")
 
@@ -118,7 +119,7 @@ class ThotBot(Client):
 				if cog.is_triggered(self, message_object, author_id, thread_id, thread_type):
 					cog.trigger(self, message_object, author_id, thread_id, thread_type)
 					break
-		elif ";;activate" in message_object.text:
+		elif message_object.text != None and ";;activate" in message_object.text:
 			self.listeningThreads.append(thread_id)
 			self.reactToMessage(message_object.uid, MessageReaction.YES)
 			self.send_status(thread_id, thread_type)
