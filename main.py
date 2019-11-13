@@ -1,11 +1,12 @@
 #coding=utf-8
-from fbchat import log, Client, logging
+from fbchat import log, Client
 from fbchat.models import *
 import re
 import os
 import random
 from urllib import request
 import json
+import logging
 
 class Cog:
 	def __init__(self, cfg):
